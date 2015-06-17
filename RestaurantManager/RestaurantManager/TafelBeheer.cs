@@ -37,11 +37,15 @@ namespace RestaurantManager
                 tafelsListbox.DisplayMember = "TafelNummer";
                 tafelsListbox.ValueMember = "TafelId";
 
-                this.Cursor = Cursors.Default;
+                tafelsListbox.SelectedIndex = -1;
             }
-            catch
+            catch (Exception ex)
             {
                 ShowError("Tafels kunnen niet opgehaald worden!", Color.Red);
+            }
+            finally
+            {
+                this.Cursor = Cursors.Default;
             }
         }
 
@@ -54,6 +58,32 @@ namespace RestaurantManager
         private void TafelBeheer_FormClosing(object sender, FormClosingEventArgs e)
         {
             main.Show();
+        }
+
+        private void tafelsListbox_SelectedIndexChanged(object sender, Telerik.WinControls.UI.Data.PositionChangedEventArgs e)
+        {
+            ShowError("", Color.Red);
+
+            if (tafelsListbox.SelectedIndex > -1)
+            {
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+
+                    Tafel tafel = Database.GetTafelById((int)tafelsListbox.SelectedValue);
+
+                    tafelNummerLabel.Text = tafel.TafelNummer;
+                    tafelKleurLabel.Text = tafel.Kleur;
+                }
+                catch
+                {
+                    ShowError("De tafel data kon niet opgehaald worden!", Color.Red);
+                }
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                }
+            }
         }
     }
 }

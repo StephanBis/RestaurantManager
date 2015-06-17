@@ -19,5 +19,10 @@ namespace RestaurantManager
         {
             return _db.Tafels.ToList();
         }
+
+        public static Tafel GetTafelById(int id)
+        {
+            return _db.Tafels.FirstOrDefault(g => g.TafelId == id);
+        }
     }
 }
