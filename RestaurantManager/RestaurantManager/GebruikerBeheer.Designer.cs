@@ -1,6 +1,6 @@
 ﻿namespace RestaurantManager
 {
-    partial class TafelBeheer
+    partial class GebruikerBeheer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
             this.telerikMetroTouchTheme1 = new Telerik.WinControls.Themes.TelerikMetroTouchTheme();
             this.errorLabel = new Telerik.WinControls.UI.RadLabel();
-            this.tafelsListbox = new Telerik.WinControls.UI.RadListControl();
+            this.gebruikersListbox = new Telerik.WinControls.UI.RadListControl();
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
-            this.tafelNummerLabel = new Telerik.WinControls.UI.RadLabel();
-            this.tafelKleurLabel = new Telerik.WinControls.UI.RadLabel();
             this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
             this.verwijderButton = new Telerik.WinControls.UI.RadButton();
-            this.tafelNummerTextbox = new Telerik.WinControls.UI.RadTextBoxControl();
+            this.gebruikersnaamTextbox = new Telerik.WinControls.UI.RadTextBoxControl();
             this.aanpassenButton = new Telerik.WinControls.UI.RadButton();
             this.toevoegenButton = new Telerik.WinControls.UI.RadButton();
             this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
             this.radLabel4 = new Telerik.WinControls.UI.RadLabel();
             this.opslaanButton = new Telerik.WinControls.UI.RadButton();
             this.buttonPanel = new Telerik.WinControls.UI.RadPanel();
-            this.kleurDropDownList = new Telerik.WinControls.UI.RadDropDownList();
+            this.rolDropDownList = new Telerik.WinControls.UI.RadDropDownList();
+            this.gebruikersnaamLabel = new Telerik.WinControls.UI.RadLabel();
+            this.rolLabel = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel5 = new Telerik.WinControls.UI.RadLabel();
+            this.wachtwoordTextbox = new Telerik.WinControls.UI.RadTextBoxControl();
             ((System.ComponentModel.ISupportInitialize)(this.errorLabel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelsListbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gebruikersListbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelNummerLabel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelKleurLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.verwijderButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelNummerTextbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gebruikersnaamTextbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aanpassenButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.toevoegenButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
@@ -59,7 +61,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.opslaanButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPanel)).BeginInit();
             this.buttonPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kleurDropDownList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolDropDownList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gebruikersnaamLabel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolLabel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wachtwoordTextbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,53 +79,35 @@
             this.errorLabel.TabIndex = 4;
             this.errorLabel.ThemeName = "TelerikMetroTouch";
             // 
-            // tafelsListbox
+            // gebruikersListbox
             // 
-            this.tafelsListbox.ItemHeight = 36;
-            this.tafelsListbox.Location = new System.Drawing.Point(12, 12);
-            this.tafelsListbox.Name = "tafelsListbox";
-            this.tafelsListbox.Size = new System.Drawing.Size(305, 300);
-            this.tafelsListbox.TabIndex = 5;
-            this.tafelsListbox.Text = "radListControl1";
-            this.tafelsListbox.ThemeName = "TelerikMetroTouch";
-            this.tafelsListbox.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.tafelsListbox_SelectedIndexChanged);
+            this.gebruikersListbox.ItemHeight = 36;
+            this.gebruikersListbox.Location = new System.Drawing.Point(12, 12);
+            this.gebruikersListbox.Name = "gebruikersListbox";
+            this.gebruikersListbox.Size = new System.Drawing.Size(305, 300);
+            this.gebruikersListbox.TabIndex = 5;
+            this.gebruikersListbox.Text = "radListControl1";
+            this.gebruikersListbox.ThemeName = "TelerikMetroTouch";
+            this.gebruikersListbox.SelectedIndexChanged += new Telerik.WinControls.UI.Data.PositionChangedEventHandler(this.gebruikersListbox_SelectedIndexChanged);
             // 
             // radLabel1
             // 
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.radLabel1.Location = new System.Drawing.Point(323, 12);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(111, 23);
+            this.radLabel1.Size = new System.Drawing.Size(128, 23);
             this.radLabel1.TabIndex = 6;
-            this.radLabel1.Text = "Tafel nummer:";
+            this.radLabel1.Text = "Gebruikersnaam:";
             this.radLabel1.ThemeName = "TelerikMetroTouch";
-            // 
-            // tafelNummerLabel
-            // 
-            this.tafelNummerLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tafelNummerLabel.Location = new System.Drawing.Point(440, 12);
-            this.tafelNummerLabel.Name = "tafelNummerLabel";
-            this.tafelNummerLabel.Size = new System.Drawing.Size(2, 2);
-            this.tafelNummerLabel.TabIndex = 7;
-            this.tafelNummerLabel.ThemeName = "TelerikMetroTouch";
-            // 
-            // tafelKleurLabel
-            // 
-            this.tafelKleurLabel.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tafelKleurLabel.Location = new System.Drawing.Point(440, 48);
-            this.tafelKleurLabel.Name = "tafelKleurLabel";
-            this.tafelKleurLabel.Size = new System.Drawing.Size(2, 2);
-            this.tafelKleurLabel.TabIndex = 9;
-            this.tafelKleurLabel.ThemeName = "TelerikMetroTouch";
             // 
             // radLabel3
             // 
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.radLabel3.Location = new System.Drawing.Point(323, 48);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(49, 23);
+            this.radLabel3.Size = new System.Drawing.Size(35, 23);
             this.radLabel3.TabIndex = 8;
-            this.radLabel3.Text = "Kleur:";
+            this.radLabel3.Text = "Rol:";
             this.radLabel3.ThemeName = "TelerikMetroTouch";
             // 
             // verwijderButton
@@ -133,13 +121,13 @@
             this.verwijderButton.ThemeName = "TelerikMetroTouch";
             this.verwijderButton.Click += new System.EventHandler(this.verwijderButton_Click);
             // 
-            // tafelNummerTextbox
+            // gebruikersnaamTextbox
             // 
-            this.tafelNummerTextbox.Location = new System.Drawing.Point(682, 12);
-            this.tafelNummerTextbox.Name = "tafelNummerTextbox";
-            this.tafelNummerTextbox.Size = new System.Drawing.Size(150, 30);
-            this.tafelNummerTextbox.TabIndex = 11;
-            this.tafelNummerTextbox.ThemeName = "TelerikMetroTouch";
+            this.gebruikersnaamTextbox.Location = new System.Drawing.Point(700, 12);
+            this.gebruikersnaamTextbox.Name = "gebruikersnaamTextbox";
+            this.gebruikersnaamTextbox.Size = new System.Drawing.Size(150, 30);
+            this.gebruikersnaamTextbox.TabIndex = 11;
+            this.gebruikersnaamTextbox.ThemeName = "TelerikMetroTouch";
             // 
             // aanpassenButton
             // 
@@ -167,9 +155,9 @@
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.radLabel2.Location = new System.Drawing.Point(565, 12);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(111, 23);
+            this.radLabel2.Size = new System.Drawing.Size(128, 23);
             this.radLabel2.TabIndex = 7;
-            this.radLabel2.Text = "Tafel nummer:";
+            this.radLabel2.Text = "Gebruikersnaam:";
             this.radLabel2.ThemeName = "TelerikMetroTouch";
             // 
             // radLabel4
@@ -177,16 +165,16 @@
             this.radLabel4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.radLabel4.Location = new System.Drawing.Point(565, 48);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(49, 23);
+            this.radLabel4.Size = new System.Drawing.Size(35, 23);
             this.radLabel4.TabIndex = 9;
-            this.radLabel4.Text = "Kleur:";
+            this.radLabel4.Text = "Rol:";
             this.radLabel4.ThemeName = "TelerikMetroTouch";
             // 
             // opslaanButton
             // 
-            this.opslaanButton.Location = new System.Drawing.Point(565, 89);
+            this.opslaanButton.Location = new System.Drawing.Point(565, 119);
             this.opslaanButton.Name = "opslaanButton";
-            this.opslaanButton.Size = new System.Drawing.Size(267, 32);
+            this.opslaanButton.Size = new System.Drawing.Size(285, 32);
             this.opslaanButton.TabIndex = 15;
             this.opslaanButton.Text = "Opslaan";
             this.opslaanButton.ThemeName = "TelerikMetroTouch";
@@ -203,49 +191,90 @@
             this.buttonPanel.TabIndex = 16;
             this.buttonPanel.ThemeName = "TelerikMetroTouch";
             // 
-            // kleurDropDownList
+            // rolDropDownList
             // 
-            this.kleurDropDownList.Location = new System.Drawing.Point(682, 48);
-            this.kleurDropDownList.Name = "kleurDropDownList";
-            this.kleurDropDownList.Size = new System.Drawing.Size(150, 30);
-            this.kleurDropDownList.TabIndex = 17;
-            this.kleurDropDownList.ThemeName = "TelerikMetroTouch";
+            radListDataItem3.Text = "Medewerker";
+            radListDataItem4.Text = "Administrator";
+            this.rolDropDownList.Items.Add(radListDataItem3);
+            this.rolDropDownList.Items.Add(radListDataItem4);
+            this.rolDropDownList.Location = new System.Drawing.Point(700, 47);
+            this.rolDropDownList.Name = "rolDropDownList";
+            this.rolDropDownList.Size = new System.Drawing.Size(150, 30);
+            this.rolDropDownList.TabIndex = 17;
+            this.rolDropDownList.ThemeName = "TelerikMetroTouch";
             // 
-            // TafelBeheer
+            // gebruikersnaamLabel
+            // 
+            this.gebruikersnaamLabel.Location = new System.Drawing.Point(457, 12);
+            this.gebruikersnaamLabel.Name = "gebruikersnaamLabel";
+            this.gebruikersnaamLabel.Size = new System.Drawing.Size(73, 23);
+            this.gebruikersnaamLabel.TabIndex = 18;
+            this.gebruikersnaamLabel.Text = "radLabel5";
+            this.gebruikersnaamLabel.ThemeName = "TelerikMetroTouch";
+            // 
+            // rolLabel
+            // 
+            this.rolLabel.Location = new System.Drawing.Point(457, 48);
+            this.rolLabel.Name = "rolLabel";
+            this.rolLabel.Size = new System.Drawing.Size(73, 23);
+            this.rolLabel.TabIndex = 19;
+            this.rolLabel.Text = "radLabel5";
+            this.rolLabel.ThemeName = "TelerikMetroTouch";
+            // 
+            // radLabel5
+            // 
+            this.radLabel5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.radLabel5.Location = new System.Drawing.Point(565, 83);
+            this.radLabel5.Name = "radLabel5";
+            this.radLabel5.Size = new System.Drawing.Size(103, 23);
+            this.radLabel5.TabIndex = 12;
+            this.radLabel5.Text = "Wachtwoord:";
+            this.radLabel5.ThemeName = "TelerikMetroTouch";
+            // 
+            // wachtwoordTextbox
+            // 
+            this.wachtwoordTextbox.Location = new System.Drawing.Point(700, 83);
+            this.wachtwoordTextbox.Name = "wachtwoordTextbox";
+            this.wachtwoordTextbox.Size = new System.Drawing.Size(150, 30);
+            this.wachtwoordTextbox.TabIndex = 13;
+            this.wachtwoordTextbox.ThemeName = "TelerikMetroTouch";
+            this.wachtwoordTextbox.UseSystemPasswordChar = true;
+            // 
+            // GebruikerBeheer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 326);
-            this.Controls.Add(this.kleurDropDownList);
+            this.ClientSize = new System.Drawing.Size(862, 326);
+            this.Controls.Add(this.radLabel5);
+            this.Controls.Add(this.wachtwoordTextbox);
+            this.Controls.Add(this.rolLabel);
+            this.Controls.Add(this.gebruikersnaamLabel);
+            this.Controls.Add(this.rolDropDownList);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.opslaanButton);
             this.Controls.Add(this.radLabel4);
             this.Controls.Add(this.radLabel2);
-            this.Controls.Add(this.tafelNummerTextbox);
-            this.Controls.Add(this.tafelKleurLabel);
-            this.Controls.Add(this.tafelNummerLabel);
+            this.Controls.Add(this.gebruikersnaamTextbox);
             this.Controls.Add(this.radLabel3);
             this.Controls.Add(this.radLabel1);
-            this.Controls.Add(this.tafelsListbox);
+            this.Controls.Add(this.gebruikersListbox);
             this.Controls.Add(this.errorLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "TafelBeheer";
+            this.Name = "GebruikerBeheer";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "TableMe - Tafels beheren";
+            this.Text = "TableMe - Gebruikers beheren";
             this.ThemeName = "TelerikMetroTouch";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TafelBeheer_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GebruikerBeheer_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.errorLabel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelsListbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gebruikersListbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelNummerLabel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelKleurLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.verwijderButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tafelNummerTextbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gebruikersnaamTextbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aanpassenButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.toevoegenButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
@@ -253,7 +282,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.opslaanButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buttonPanel)).EndInit();
             this.buttonPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kleurDropDownList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolDropDownList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gebruikersnaamLabel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rolLabel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wachtwoordTextbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -264,19 +297,21 @@
 
         private Telerik.WinControls.Themes.TelerikMetroTouchTheme telerikMetroTouchTheme1;
         private Telerik.WinControls.UI.RadLabel errorLabel;
-        private Telerik.WinControls.UI.RadListControl tafelsListbox;
+        private Telerik.WinControls.UI.RadListControl gebruikersListbox;
         private Telerik.WinControls.UI.RadLabel radLabel1;
-        private Telerik.WinControls.UI.RadLabel tafelNummerLabel;
-        private Telerik.WinControls.UI.RadLabel tafelKleurLabel;
         private Telerik.WinControls.UI.RadLabel radLabel3;
         private Telerik.WinControls.UI.RadButton verwijderButton;
-        private Telerik.WinControls.UI.RadTextBoxControl tafelNummerTextbox;
+        private Telerik.WinControls.UI.RadTextBoxControl gebruikersnaamTextbox;
         private Telerik.WinControls.UI.RadButton aanpassenButton;
         private Telerik.WinControls.UI.RadButton toevoegenButton;
         private Telerik.WinControls.UI.RadLabel radLabel2;
         private Telerik.WinControls.UI.RadLabel radLabel4;
         private Telerik.WinControls.UI.RadButton opslaanButton;
         private Telerik.WinControls.UI.RadPanel buttonPanel;
-        private Telerik.WinControls.UI.RadDropDownList kleurDropDownList;
+        private Telerik.WinControls.UI.RadDropDownList rolDropDownList;
+        private Telerik.WinControls.UI.RadLabel gebruikersnaamLabel;
+        private Telerik.WinControls.UI.RadLabel rolLabel;
+        private Telerik.WinControls.UI.RadLabel radLabel5;
+        private Telerik.WinControls.UI.RadTextBoxControl wachtwoordTextbox;
     }
 }

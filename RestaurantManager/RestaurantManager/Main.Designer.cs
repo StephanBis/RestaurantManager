@@ -32,14 +32,17 @@
             this.errorLabel = new Telerik.WinControls.UI.RadLabel();
             this.radApplicationMenu = new Telerik.WinControls.UI.RadApplicationMenu();
             this.uitloggenMenuItem = new Telerik.WinControls.UI.RadMenuButtonItem();
+            this.verplaatsMenuItem = new Telerik.WinControls.UI.RadMenuButtonItem();
             this.tafelsMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.gebruikersMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.menuMenuItem = new Telerik.WinControls.UI.RadMenuItem();
             this.tafelPanel = new Telerik.WinControls.UI.RadPanel();
+            this.verplaatsLabel = new Telerik.WinControls.UI.RadLabel();
             ((System.ComponentModel.ISupportInitialize)(this.errorLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radApplicationMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tafelPanel)).BeginInit();
             this.tafelPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verplaatsLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +59,8 @@
             // radApplicationMenu
             // 
             this.radApplicationMenu.ButtonItems.AddRange(new Telerik.WinControls.RadItem[] {
-            this.uitloggenMenuItem});
+            this.uitloggenMenuItem,
+            this.verplaatsMenuItem});
             this.radApplicationMenu.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.tafelsMenuItem,
             this.gebruikersMenuItem,
@@ -82,6 +86,19 @@
             this.uitloggenMenuItem.Name = "uitloggenMenuItem";
             this.uitloggenMenuItem.Text = "Uitloggen";
             this.uitloggenMenuItem.Click += new System.EventHandler(this.uitloggenMenuItem_Click);
+            // 
+            // verplaatsMenuItem
+            // 
+            this.verplaatsMenuItem.AccessibleDescription = "Verplaats modus";
+            this.verplaatsMenuItem.AccessibleName = "Verplaats modus";
+            // 
+            // 
+            // 
+            this.verplaatsMenuItem.ButtonElement.AccessibleDescription = "Verplaats modus";
+            this.verplaatsMenuItem.ButtonElement.AccessibleName = "Verplaats modus";
+            this.verplaatsMenuItem.Name = "verplaatsMenuItem";
+            this.verplaatsMenuItem.Text = "Verplaats modus";
+            this.verplaatsMenuItem.Click += new System.EventHandler(this.verplaatsMenuItem_Click);
             // 
             // tafelsMenuItem
             // 
@@ -109,6 +126,7 @@
             // 
             // tafelPanel
             // 
+            this.tafelPanel.Controls.Add(this.verplaatsLabel);
             this.tafelPanel.Controls.Add(this.radApplicationMenu);
             this.tafelPanel.Controls.Add(this.errorLabel);
             this.tafelPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -117,6 +135,16 @@
             this.tafelPanel.Size = new System.Drawing.Size(1078, 494);
             this.tafelPanel.TabIndex = 6;
             this.tafelPanel.ThemeName = "TelerikMetroTouch";
+            // 
+            // verplaatsLabel
+            // 
+            this.verplaatsLabel.Location = new System.Drawing.Point(109, 28);
+            this.verplaatsLabel.Name = "verplaatsLabel";
+            this.verplaatsLabel.Size = new System.Drawing.Size(152, 23);
+            this.verplaatsLabel.TabIndex = 6;
+            this.verplaatsLabel.Text = "Verplaats mode actief";
+            this.verplaatsLabel.ThemeName = "TelerikMetroTouch";
+            this.verplaatsLabel.Visible = false;
             // 
             // Main
             // 
@@ -139,6 +167,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.radApplicationMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tafelPanel)).EndInit();
             this.tafelPanel.ResumeLayout(false);
+            this.tafelPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verplaatsLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -154,5 +184,7 @@
         private Telerik.WinControls.UI.RadPanel tafelPanel;
         private Telerik.WinControls.UI.RadMenuItem menuMenuItem;
         private Telerik.WinControls.UI.RadMenuButtonItem uitloggenMenuItem;
+        private Telerik.WinControls.UI.RadMenuButtonItem verplaatsMenuItem;
+        private Telerik.WinControls.UI.RadLabel verplaatsLabel;
     }
 }
