@@ -15,5 +15,7 @@ namespace RestaurantManager
 
         public virtual DbSet<Gebruiker> Gebruikers { get; set; }
         public virtual DbSet<Tafel> Tafels { get; set; }
+        public virtual DbSet<Product> Producten { get; set; }
+        public virtual DbSet<Categorie> Categorien { get; set; }
     }
 }

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.RadListDataItem radListDataItem3 = new Telerik.WinControls.UI.RadListDataItem();
-            Telerik.WinControls.UI.RadListDataItem radListDataItem4 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem1 = new Telerik.WinControls.UI.RadListDataItem();
+            Telerik.WinControls.UI.RadListDataItem radListDataItem2 = new Telerik.WinControls.UI.RadListDataItem();
             this.telerikMetroTouchTheme1 = new Telerik.WinControls.Themes.TelerikMetroTouchTheme();
             this.errorLabel = new Telerik.WinControls.UI.RadLabel();
             this.gebruikersListbox = new Telerik.WinControls.UI.RadListControl();
@@ -193,12 +193,13 @@
             // 
             // rolDropDownList
             // 
-            radListDataItem3.Text = "Medewerker";
-            radListDataItem4.Text = "Administrator";
-            this.rolDropDownList.Items.Add(radListDataItem3);
-            this.rolDropDownList.Items.Add(radListDataItem4);
+            radListDataItem1.Text = "Medewerker";
+            radListDataItem2.Text = "Administrator";
+            this.rolDropDownList.Items.Add(radListDataItem1);
+            this.rolDropDownList.Items.Add(radListDataItem2);
             this.rolDropDownList.Location = new System.Drawing.Point(700, 47);
             this.rolDropDownList.Name = "rolDropDownList";
+            this.rolDropDownList.ReadOnly = true;
             this.rolDropDownList.Size = new System.Drawing.Size(150, 30);
             this.rolDropDownList.TabIndex = 17;
             this.rolDropDownList.ThemeName = "TelerikMetroTouch";

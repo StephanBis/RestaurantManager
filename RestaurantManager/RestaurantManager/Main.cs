@@ -111,7 +111,9 @@ namespace RestaurantManager
 
         private void menuMenuItem_Click(object sender, EventArgs e)
         {
-
+            MenuBeheer menuBeheer = new MenuBeheer(gebruiker, this);
+            menuBeheer.Show();
+            this.Hide();
         }
 
         private void uitloggenMenuItem_Click(object sender, EventArgs e)

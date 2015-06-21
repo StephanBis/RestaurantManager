@@ -207,6 +207,7 @@
             // 
             this.kleurDropDownList.Location = new System.Drawing.Point(682, 48);
             this.kleurDropDownList.Name = "kleurDropDownList";
+            this.kleurDropDownList.ReadOnly = true;
             this.kleurDropDownList.Size = new System.Drawing.Size(150, 30);
             this.kleurDropDownList.TabIndex = 17;
             this.kleurDropDownList.ThemeName = "TelerikMetroTouch";
